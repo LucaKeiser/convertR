@@ -18,37 +18,40 @@ You can install the development version of convertR from
 devtools::install_github("LucaKeiser/convertR")
 ```
 
+## Load the package
+
+``` r
+library(convertR)
+```
+
 ## Examples
 
 This is a basic example which shows you how to solve a common problem:
 
-``` r
-library(convertR)
-## basic example code
-```
+### Temperature
 
-### 1) from degree Celsius to degree Fahrenheit
+#### 1) from degree Celsius to degree Fahrenheit:
 
 ``` r
 celsius_to_fahrenheit(100)
 #> [1] 212
 ```
 
-### 2) from degree Celsiusi to degree Kelvin
+#### 2) from degree Celsiusi to degree Kelvin:
 
 ``` r
 celsius_to_kelvin(100)
 #> [1] 373.15
 ```
 
-### 3) form degree Fahrenheit to degree Celsius
+#### 3) form degree Fahrenheit to degree Celsius:
 
 ``` r
 fahrenheit_to_celsius(100)
 #> [1] 37.77778
 ```
 
-### 4) from degree Fahrenheit to degree Kelvin
+#### 4) from degree Fahrenheit to degree Kelvin:
 
 ``` r
 fahrenheit_to_kelvin(100)
