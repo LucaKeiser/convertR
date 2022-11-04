@@ -63,7 +63,7 @@ fahrenheit_to_kelvin(100)
 
 ### You could also do a table
 
-```{r}
+```{r message=FALSE}
 # load additional packge
 library(tidyverse)
 
