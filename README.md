@@ -6,7 +6,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of convertR is to …
+The goal of convertR is to convert one unit into another.
 
 ## Installation
 
@@ -18,7 +18,7 @@ You can install the development version of convertR from
 devtools::install_github("LucaKeiser/convertR")
 ```
 
-## Example
+## Examples
 
 This is a basic example which shows you how to solve a common problem:
 
@@ -27,29 +27,30 @@ library(convertR)
 ## basic example code
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+### 1) from degree Celsius to degree Fahrenheit
 
 ``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
+celsius_to_fahrenheit(100)
+#> [1] 212
 ```
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this. You could also
-use GitHub Actions to re-render `README.Rmd` every time you push. An
-example workflow can be found here:
-<https://github.com/r-lib/actions/tree/v1/examples>.
+### 2) from degree Celsiusi to degree Kelvin
 
-You can also embed plots, for example:
+``` r
+celsius_to_kelvin(100)
+#> [1] 373.15
+```
 
-<img src="man/figures/README-pressure-1.png" width="100%" />
+### 3) form degree Fahrenheit to degree Celsius
 
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
+``` r
+fahrenheit_to_celsius(100)
+#> [1] 37.77778
+```
+
+### 4) from degree Fahrenheit to degree Kelvin
+
+``` r
+fahrenheit_to_kelvin(100)
+#> [1] 310.9278
+```
