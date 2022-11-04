@@ -57,3 +57,30 @@ fahrenheit_to_celsius(100)
 fahrenheit_to_kelvin(100)
 #> [1] 310.9278
 ```
+
+### You could also do a table
+
+``` r
+# load additional packge
+library(tidyverse)
+#> ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
+#> ✔ ggplot2 3.3.6      ✔ purrr   0.3.5 
+#> ✔ tibble  3.1.8      ✔ dplyr   1.0.10
+#> ✔ tidyr   1.2.1      ✔ stringr 1.4.1 
+#> ✔ readr   2.1.3      ✔ forcats 0.5.2 
+#> ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+#> ✖ dplyr::filter() masks stats::filter()
+#> ✖ dplyr::lag()    masks stats::lag()
+
+input_celsius <- 100
+tibble(
+  input_celsius = input_celsius,
+  fahrenheit = celsius_to_fahrenheit(input_celsius),
+  kelvin = celsius_to_kelvin(input_celsius)
+) %>% 
+  knitr::kable()
+```
+
+| input_celsius | fahrenheit | kelvin |
+|--------------:|-----------:|-------:|
+|           100 |        212 | 373.15 |

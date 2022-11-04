@@ -61,3 +61,19 @@ fahrenheit_to_celsius(100)
 fahrenheit_to_kelvin(100)
 ```
 
+### You could also do a table
+
+```{r}
+# load additional packge
+library(tidyverse)
+
+input_celsius <- 100
+tibble(
+  input_celsius = input_celsius,
+  fahrenheit = celsius_to_fahrenheit(input_celsius),
+  kelvin = celsius_to_kelvin(input_celsius)
+) %>% 
+  knitr::kable()
+```
+
+
